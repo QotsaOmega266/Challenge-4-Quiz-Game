@@ -50,7 +50,7 @@ mainEl.appendChild(h1El);
 mainEl.appendChild(startBtn);
 
 
-
+//App runs when "start" is clicked
 startBtn.addEventListener("click", function(){ 
     startBtn.remove();
     startTimer();
@@ -58,6 +58,7 @@ startBtn.addEventListener("click", function(){
 
 } );
 
+//starts timer for quiz
 function startTimer() {
     timer = setInterval(() => {
               timeLeft--;
@@ -71,6 +72,7 @@ function startTimer() {
 
 };
 
+//begins the quiz
 function startQuestions() {
   
     const currentQuizData = listOfQuestions[currentQuestion];
@@ -88,7 +90,7 @@ function startQuestions() {
 
 };
 
-
+//checks if the player chose the correct answer
 function selectAnswer(selectedOption) {
         const currentQuizData = quizData[currentQuestion];
       
@@ -106,7 +108,7 @@ function selectAnswer(selectedOption) {
       }
 
 
-
+//ends the quiz and records highscore
 function endQuiz() {
 
     clearInterval(timer);
